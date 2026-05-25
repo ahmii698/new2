@@ -69,6 +69,20 @@ function Logo() {
   );
 }
 
+// Red Button Component (same style everywhere)
+function RedButton({ href, children, className = "" }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-display tracking-wider px-6 py-3 rounded-md text-sm red-glow transition ${className}`}
+    >
+      {children}
+    </a>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -88,14 +102,9 @@ function Index() {
               </li>
             ))}
           </ul>
-          <a
-            href={TELEGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-display tracking-wider px-6 py-3 rounded-md text-sm red-glow transition"
-          >
+          <RedButton href={TELEGRAM_URL}>
             <Send className="w-4 h-4" /> JOIN RESEARCH COMMUNITY
-          </a>
+          </RedButton>
         </nav>
       </header>
 
@@ -118,14 +127,9 @@ function Index() {
               performance optimisation, supplement research, and industry insights.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href={TELEGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-primary-foreground font-display tracking-wider px-7 py-4 rounded-md red-glow transition"
-              >
+              <RedButton href={TELEGRAM_URL}>
                 <Send className="w-4 h-4" /> JOIN TELEGRAM
-              </a>
+              </RedButton>
               <a
                 href={TIKTOK_URL}
                 target="_blank"
@@ -258,14 +262,9 @@ function Index() {
               <p className="text-muted-foreground mb-6 max-w-md">
                 Be part of a growing community built on knowledge, research, and performance.
               </p>
-              <a
-                href={TELEGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary/90 text-primary-foreground font-display tracking-wider px-7 py-4 rounded-md red-glow w-full max-w-md mb-6"
-              >
+              <RedButton href={TELEGRAM_URL} className="w-full max-w-md mb-6">
                 <Send className="w-4 h-4" /> JOIN TELEGRAM COMMUNITY
-              </a>
+              </RedButton>
               <div className="grid sm:grid-cols-2 gap-3">
                 <a
                   href={TIKTOK_URL}
@@ -279,18 +278,9 @@ function Index() {
                     <div className="font-semibold">@tru4mlabs</div>
                   </div>
                 </a>
-                <a
-                  href={TELEGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-background/40 border border-border rounded-lg p-3 flex items-center gap-3 hover:border-primary transition"
-                >
-                  <Send className="w-8 h-8 text-primary" />
-                  <div className="text-xs">
-                    <div className="text-muted-foreground">Telegram Link</div>
-                    <div className="font-semibold">Join Telegram</div>
-                  </div>
-                </a>
+                <RedButton href={TELEGRAM_URL} className="w-full">
+                  <Send className="w-4 h-4" /> JOIN TELEGRAM
+                </RedButton>
               </div>
             </div>
           </div>
@@ -343,14 +333,9 @@ function Index() {
           <div>
             <h5 className="font-display font-bold mb-4 text-sm tracking-wider">CONNECT</h5>
             <div className="space-y-3">
-              <a
-                href={TELEGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 border border-border hover:border-primary rounded-md px-4 py-3 text-sm transition"
-              >
-                <Send className="w-4 h-4 text-primary" /> JOIN TELEGRAM
-              </a>
+              <RedButton href={TELEGRAM_URL} className="w-full justify-start">
+                <Send className="w-4 h-4" /> JOIN TELEGRAM
+              </RedButton>
               <a
                 href={TIKTOK_URL}
                 target="_blank"
