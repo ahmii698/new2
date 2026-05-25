@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .red-glow {
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+  }
+  .card-grad {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .skew-card {
+    transform: rotate(2deg);
+    transition: transform 0.3s ease;
+  }
+  .skew-card:hover {
+    transform: rotate(0deg);
+  }
+}
