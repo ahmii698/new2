@@ -29,7 +29,7 @@ const TikTokIcon = ({ className }) => (
 const TIKTOK_URL = "https://www.tiktok.com/@tru4mlabs?_r=1&_t=ZN-96ZwYzI26nm";
 const TELEGRAM_URL = "https://t.me/+NGRfhcu1tJw3ZjJk";
 
-const navItems = ["Home", "About", "Research", "Community", "Updates", "Contact"];
+const navItems = ["Home", "About", "Research", "Community", "Contact"];
 
 const features = [
   { icon: FlaskConical, label: "Research\nFocused" },
